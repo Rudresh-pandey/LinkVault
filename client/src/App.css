@@ -1,0 +1,40 @@
+.main{
+    display: flex; 
+    flex-direction: column; 
+    justify-content:center ;  
+    align-items: center;
+    padding: 100px 0px;
+    gap: 20px;
+}
+
+input{
+    border: 1px solid black ;
+}
+
+.input button{
+    background-color: darkcyan;
+    border: 2px solid black;
+    color: white;
+    padding: 2px 8px;
+}
+.input input{
+    width: 300px;
+    padding: 2px 4px;
+    font-weight: 700;
+}
+
+.input{
+    width: 400px;
+    display: flex;
+    justify-content: space-evenly;
+}
+.list{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.item{
+    width: 400px;
+    background-color:rgb(24, 182, 182);
+    border: 1px solid black ;
+}

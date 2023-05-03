@@ -6,12 +6,18 @@ function App() {
   const [overlayClass, SetoverlayClass] = useState("");
   const [input, setInput] = useState("");
   const [items, setItems] = useState([
+    "https://medium.com/latestTechs",
+    "mango",
+    "http://Github.com/Rudresh-pandey/linkVault",
+    "mango",
+    "apple",
+    "mango",
+    "apple",
     "apple",
     "mango",
     "apple",
     "mango",
     "apple",
-    "mango",
   ]);
   function addItem() {
     setItems([...items, input]);
@@ -30,7 +36,16 @@ function App() {
           {items.map((item, index) => {
             return (
               <div className="item">
-                <p>{item}</p>
+                <div className="ham"></div>
+                <div className="listItem">
+                  <div className="itemInfo">
+                    <p>here will be the title ...</p>
+                    <p>15/03/2023</p>
+                  </div>
+                  <div className="itemUrl">
+                    <p>{item}</p>
+                  </div>
+                </div>
               </div>
             );
           })}

@@ -58,7 +58,7 @@ function App() {
               SetoverlayClass("active");
             }}
           >
-            add
+            <img src="images/addition.png" alt="" />
           </button>
         </div>
       </div>

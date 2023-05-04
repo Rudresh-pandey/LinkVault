@@ -52,7 +52,7 @@ function App() {
         </div>
         <div className="add">
           <button
-            id="addBtn"
+            id="addList"
             onClick={() => {
               SetinputClass("input active");
               SetoverlayClass("active");
@@ -64,11 +64,25 @@ function App() {
       </div>
 
       <div className={inputClass}>
-        <div>
-          <input type="text" value={input} onChange={inputdata} />
-          <button onClick={addItem} id="addBtn">
-            aDD
-          </button>
+        <div className="inputoptions">
+          <div className="inputleft">
+            <div className="selectionBtn">
+              <button>
+                <img src="images/foldericon.png" alt="" />
+              </button>
+              <button>
+                <img src="images/fileicon.png" alt="" />
+              </button>
+            </div>
+            <div>
+              <input type="text" value={input} onChange={inputdata} />
+            </div>
+          </div>
+          <div className="inputright">
+            <button onClick={addItem} id="addBtn">
+              <img src="images/star.png" alt="" />
+            </button>
+          </div>
         </div>
         <button
           id="closeBtn"

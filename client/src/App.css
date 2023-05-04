@@ -15,17 +15,32 @@ input{
 }
 
 .input button{
-    background-color: darkcyan;
+    /* background-color: darkcyan;
     border: 2px solid black;
-    color: white;
-    padding: 2px 8px;
-    height: 30px;
+    color: white;*/
+    padding: 2px 8px; 
+    height: 50px;
+    width: 50px;
 }
+
+.selectionBtn button:hover{
+    background-color: beige;
+}
+
+#addBtn{
+    height: 40px;
+    width: 40px;
+}
+
 .input input{
-    width: 300px;
-    padding: 2px 4px;
+    width: 400px;
+    padding: 2px 6px;
     font-weight: 700;
-    height: 30px;
+    height: 40px;
+    background-color: beige;
+    border: none;
+    border-radius: 10px;
+    color: dodgerblue;
 }
 
 .input{
@@ -48,6 +63,22 @@ input{
 
 }
 
+.inputoptions{
+    display: flex;
+    height: 130px;
+    align-items: center;
+}
+
+.inputleft{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.inputright{
+    align-self: center;
+}
+
 .input.active{
 
     transform: translate(-50%,-50%) scale(1);
@@ -57,6 +88,7 @@ input{
     display: flex;
     flex-direction: column;
     gap: 20px;
+    align-items: center;
 }
 .item{
     width: 550px;
@@ -65,6 +97,7 @@ input{
     gap: 10px;
     justify-content: center;
     align-items: center;
+    max-width: 80%;
 
 }
 
@@ -111,15 +144,20 @@ input{
     /* padding: 5px 5px; */
     /* border-radius: 4px; */
     cursor: pointer;
+    height: 40px;
+    width: 40px;
 }
 
 #closeBtn{
     border: none;
     outline: none;
     color: black;
-    font-size: 1.5rem;
+    font-size: 2.5rem;
     font-weight: bold;
     background:none;
+    position: fixed;
+    bottom: 90%;
+    left: 90%;
 }
 
 #overlay{

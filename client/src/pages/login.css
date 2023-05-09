@@ -1,0 +1,27 @@
+
+.container{
+    display: flex;
+    flex-direction: column  ;
+    width: 100%;
+    align-items: center;
+    padding: 10px 0px;
+}
+
+.header{
+    display: flex;
+    width: 80%;
+    justify-content: space-between;
+    
+}
+
+.loginBtn{
+    display: flex;
+    gap: 20px;
+}
+
+.loginBtn button{
+    font-weight: bold;
+    background-color: black;
+    color: white;
+    padding: 5px 10px;
+}

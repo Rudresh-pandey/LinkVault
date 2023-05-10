@@ -1,6 +1,6 @@
 import React from "react";
 import { Link, Outlet } from "react-router-dom";
-import "./login.css";
+import "./intro.css";
 
 export default function IntroPage() {
   return (
@@ -9,8 +9,12 @@ export default function IntroPage() {
         <div className="header">
           <div className="logo">LINKvault</div>
           <div className="loginBtn">
-            <button>sing in</button>
-            <button>sing up</button>
+            <Link to={"/login"} className="logBtn">
+              sing in
+            </Link>
+            <Link to={"/login"} className="logBtn">
+              sing up
+            </Link>
           </div>
         </div>
         <div className="content">Container</div>

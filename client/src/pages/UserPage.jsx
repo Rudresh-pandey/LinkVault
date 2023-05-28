@@ -3,25 +3,34 @@ import "../App.css";
 import { useState } from "react";
 
 export default function UserPage() {
+  const date = new Date();
   const [inputClass, SetinputClass] = useState("input");
   const [overlayClass, SetoverlayClass] = useState("");
   const [input, setInput] = useState("");
+  // const [items, setItems] = useState([
+  //   "https://medium.com/latestTechs",
+  //   "mango",
+  //   "http://Github.com/Rudresh-pandey/linkVault",
+  // ]);
+
   const [items, setItems] = useState([
-    "https://medium.com/latestTechs",
-    "mango",
-    "http://Github.com/Rudresh-pandey/linkVault",
-    "mango",
-    "apple",
-    "mango",
-    "apple",
-    "apple",
-    "mango",
-    "apple",
-    "mango",
-    "apple",
+    {
+      title: "here will be the title ...",
+      time: "15/03/17",
+      desc: "http://Github.com/Rudresh-pandey/linkVault",
+    },
   ]);
+
   function addItem() {
-    setItems([...items, input]);
+    setItems([
+      ...items,
+      {
+        title: "here will be the title ...",
+        time: date.toLocaleString(),
+        desc: input,
+      },
+    ]);
+    console.log(date.toLocaleString());
   }
   function inputdata(e) {
     setInput(e.target.value);
@@ -40,11 +49,11 @@ export default function UserPage() {
                 <div className="ham"></div>
                 <div className="listItem">
                   <div className="itemInfo">
-                    <p>here will be the title ...</p>
-                    <p>15/03/2023</p>
+                    <p>{item.title}</p>
+                    <p>{item.time}</p>
                   </div>
                   <div className="itemUrl">
-                    <p>{item}</p>
+                    <p>{item.desc}</p>
                   </div>
                 </div>
               </div>

@@ -1,14 +1,23 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./logreg.css";
+import axios from "axios";
 export default function RegisterPage() {
   const [userName, SetUserName] = useState("");
   const [userEmail, SetUserEmail] = useState("");
   const [userPass, SetUserPass] = useState("");
-
+  async function registerUser(e) {
+    e.preventDefault();
+    await axios.post("/register", {
+      userName,
+      userEmail,
+      userPass,
+    });
+    // axios.get("/test");
+  }
   return (
     <div className="mt-16 grow flex items-center justify-around">
-      <form className="form" action="">
+      <form className="form" onSubmit={registerUser}>
         <input
           type="text"
           value={userName}
@@ -33,13 +42,7 @@ export default function RegisterPage() {
           value={userPass}
           placeholder="password"
         />
-        <button
-          className="logBtn"
-          onClick={(e) => {
-            e.preventDefault();
-            console.log(userEmail, userName, userPass);
-          }}
-        >
+        <button className="logBtn" type="submit">
           Register
         </button>
         <div>

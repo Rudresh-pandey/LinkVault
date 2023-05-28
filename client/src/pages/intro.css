@@ -1,4 +1,6 @@
-
+:root{
+    --logbtn : #00b5ff;
+}
 .container{
     display: flex;
     flex-direction: column  ;
@@ -26,3 +28,7 @@
     padding: 5px 10px;
     
 }
+
+
+
+
